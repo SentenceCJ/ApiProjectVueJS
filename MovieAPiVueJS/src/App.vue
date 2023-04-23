@@ -15,7 +15,8 @@ function searchMovie() {
 
 
 <template>
-  
+  <div class="left-banner"></div>
+    <div class="right-banner"></div>
   <nav class="navbar">
     <div class="navbar-brand">
       <a href="#">
@@ -53,6 +54,26 @@ function searchMovie() {
   background-repeat: no-repeat;
   background-size: 100% 100%;
 } */
+
+.left-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100%;
+  background-color: #587797;
+  z-index:-1 ;
+}
+
+.right-banner {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100%;
+  background-color: #587797;
+  z-index: -1;
+}
 
 .footer {
   position: fixed;

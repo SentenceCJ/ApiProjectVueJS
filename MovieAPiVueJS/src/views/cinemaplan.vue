@@ -1,22 +1,24 @@
 <template>
-  <div class="reservation">
-    <h1>Réservation de places</h1>
+  <img src="http://mediakwest.com/wp-content/uploads/2016/11/formule_dynamic.png" alt="salle de cinéma" style="margin-left:750px;">
+  <h1 style="text-align:center;">Réservation de places</h1>
+  <div class="reservation"  >
+    
     <form @submit.prevent="submitForm">
       <label for="name">Nom :</label>
       <input type="text" id="name" v-model="name" required>
       <label for="color">Rangée :</label>
       <select id="color" v-model="color" required>
         <option value="" disabled selected>Sélectionnez une rangée</option>
-        <option value="orange">Orange</option>
+        <option value="jaune">Jaune</option>
         <option value="bleu">Bleu</option>
-        <option value="vert">Vert</option>
+        <option value="rouge">Rouge</option>
       </select>
       <label for="quantity">Nombre de places :</label>
       <input type="number" id="quantity" v-model="quantity" min="1" max="150" required>
       <p> Prix des places : </p>
-      <p>Rangée Orange = 7e</p>
-      <p>Rangée Bleu = 10e</p>
-      <p>Rangée Vert = 13e</p>
+      <p>Rangée Bleu = 7e</p>
+      <p>Rangée Jaune = 9e</p>
+      <p>Rangée Rouge = 11e</p>
       <button type="submit">Réserver</button>
     </form>
     <div class="summary" v-if="reservationSubmitted">
@@ -24,8 +26,9 @@
       <p>Nom : {{ name }}</p>
       <p>Rangée : {{ color }}</p>
       <p>Nombre de places : {{ quantity }}</p>
-      <p>Prix unitaire : {{ getPrice() }} €</p>
-      <!-- <p>Places disponibles : {{ getAvailablePlaces() }} / 150</p> -->
+      <p>Prix unitaire : {{ getTotalPrice() }} €</p>
+      <!-- <p>Places disponibles : {{ getAvailablePlaces() }} / 150</p>
+      http://mediakwest.com/wp-content/uploads/2016/11/formule_dynamic.png -->
     </div>
   </div>
 </template>
@@ -37,6 +40,7 @@ export default {
       name: '',
       color: '',
       quantity: 1,
+      price : 1,
       reservationSubmitted: false
     }
   },
@@ -46,15 +50,19 @@ export default {
     },
     getPrice() {
       switch (this.color) {
-        case 'orange':
-          return 7;
         case 'bleu':
-          return 10;
-        case 'vert':
-          return 13;
+          return 7;
+        case 'jaune':
+          return 9;
+        case 'rouge':
+          return 11;
         default:
           return 0;
       }
+    },
+    getTotalPrice() {
+      const price = this.getPrice();
+      return price * this.quantity;
     },
 //     getAvailablePlaces() {
 //   const quantity = this.quantity;
@@ -65,25 +73,25 @@ export default {
 </script>
 
 <style>
-/* .reservation {
+.reservation {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-top: 50px;
 }
-h1 {
+/* h1 {
   font-size: 2em;
   margin-bottom: 30px;
-}
-form {
+} */
+ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+}/*
 label {
   margin-top: 20px;
   font-size: 1.2em;
-}
+} */
 input, select {
   margin-top: 10px;
   padding: 10px;
@@ -92,7 +100,7 @@ input, select {
   width: 300px;
   max-width: 100%;
 }
-button[type="submit"] {
+/* button[type="submit"] {
   margin-top: 20px;
   padding: 10px 20px;
   border: none;
@@ -101,14 +109,13 @@ button[type="submit"] {
   font-size: 1.2em;
   border-radius: 5px;
   cursor: pointer;
-}
+} */
 .summary {
-  margin-top: 50px;
   border: 1px solid #ccc;
   padding: 20px;
   border-radius: 5px;
-  width: 500px;
-  max-width: 100%;
-  text-align: center;
-} */
+  width: 40%; /* utiliser une largeur plus petite pour laisser de l'espace pour le formulaire */
+  margin-left: 10%; /* ajouter un espacement entre les deux éléments */
+  float: right;
+}
 </style>

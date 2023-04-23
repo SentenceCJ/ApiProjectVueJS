@@ -1,28 +1,44 @@
-import
+<script setup lang="ts">
+import ImageCinema from '../components/icons/cinéma.png'
+
+
+</script>
 <template>
   
-  <div class="about" style="margin-left: 450px;">
+  <div class="about" >
     <!-- Image centrée en haut de la page -->
-    <div class="image-container">
-      <img src="require('@/icons/CJmovies.png" alt="cinéma">
+    <div class="image-container" style="margin-left: 380px;">
+      <img src="https://i.familiscope.fr/1400x787/smart/2023/02/16/actu-cinema.jpg" alt="cinéma" style="width:76%">
+      <!-- <img src="@/icons/cinéma.png" alt="cinéma" style="width:80%"> -->
     </div>
     
     <!-- Trois cases avec une image et un bouton chacune -->
+    <H1> Cinema near You</H1>
     <div class="box-container">
       <div class="box">
-        <img src="url_de_votre_image" alt="description_de_l'image">
-        <button @click="$router.push('./CinemaPlan')">Redirection vers une autre page</button>
+        <p>UGC Ciné Cité Bordeaux</p>
+        <p>13-15 Rue Georges Bonnac, 33000 Bordeaux</p>
+        <br>
+        <!-- <img src="url_de_votre_image" alt="description_de_l'image"> -->
+        <button @click="$router.push('./CinemaPlan')">Réserver un Billet</button>
       </div>
       <div class="box">
-        <img src="url_de_votre_image" alt="description_de_l'image">
-        <button @click="$router.push('./CinemaPlan')">Redirection vers une autre page</button>
+        <p>CINÉMA CGR Bordeaux Le Français</p>
+        <p>9 Rue Montes, 33000 Bordeaux</p>
+        <br>
+        <!-- <img src="url_de_votre_image" alt="description_de_l'image"> -->
+        <button @click="$router.push('./CinemaPlan')">Réserver un Billet</button>
       </div>
       <div class="box">
-        <img src="url_de_votre_image" alt="description_de_l'image">
-        <button @click="$router.push('./CinemaPlan')">Redirection vers une autre page</button>
+        <!-- <img src="url_de_votre_image" alt="description_de_l'image"> -->
+        <p>Cinéma Mégarama Bordeaux</p>
+        <p>7 Quai des Queyries, 33100 Bordeaux</p>
+        <br>
+        <button @click="$router.push('./CinemaPlan')">Réserver un Billet</button>
       </div>
     </div>
   </div>
+  
 </template>
 
 <style>
