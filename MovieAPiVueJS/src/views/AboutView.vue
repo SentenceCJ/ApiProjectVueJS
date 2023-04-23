@@ -1,5 +1,6 @@
 import
 <template>
+  
   <div class="about" style="margin-left: 450px;">
     <!-- Image centrée en haut de la page -->
     <div class="image-container">
@@ -28,11 +29,7 @@ import
 
 
 
-body {
-  background-image: linear-gradient(to right, #587797, #587797 10%, transparent 10%, transparent 90%,#587797 90%);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
+
 @media (min-width: 1024px) {
   .about {
     min-height: 100vh;
@@ -62,7 +59,7 @@ body {
     max-width: 200px;
     margin-bottom: 20px;
   }
-  .box button {
+  /* .box button {
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -74,6 +71,6 @@ body {
     margin-top: 20px;
     cursor: pointer;
     border-radius: 5px;
-  }
+  } */
 }
 </style>

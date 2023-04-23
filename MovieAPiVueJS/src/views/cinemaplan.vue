@@ -65,16 +65,16 @@ export default {
 </script>
 
 <style>
-.reservation {
+/* .reservation {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 50px;
 }
-/* h1 {
+h1 {
   font-size: 2em;
   margin-bottom: 30px;
-} */
+}
 form {
   display: flex;
   flex-direction: column;
@@ -93,13 +93,13 @@ input, select {
   max-width: 100%;
 }
 button[type="submit"] {
-  /* margin-top: 20px;
+  margin-top: 20px;
   padding: 10px 20px;
   border: none;
   background-color: #4CAF50;
   color: white;
   font-size: 1.2em;
-  border-radius: 5px; */
+  border-radius: 5px;
   cursor: pointer;
 }
 .summary {
@@ -110,5 +110,5 @@ button[type="submit"] {
   width: 500px;
   max-width: 100%;
   text-align: center;
-}
+} */
 </style>

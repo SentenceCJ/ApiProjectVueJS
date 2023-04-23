@@ -1,6 +1,6 @@
 
   <template>
-    <div style="margin-left: 130px;">
+    <div style="margin-left: 130px;margin-bottom:100px">
     <div class="FilmandSeries">
       <h1 class="title">Movies and Series available</h1>
       <div class="item-movie" >
@@ -13,11 +13,13 @@
           </li>
         </ul>
       </div>
-      <div class="pagination">
+      
+    </div>
+    <div class="pagination">
         <button @click="previousPage" :disabled="currentPage === 0" class="btn btn-secondary" style="margin-left: 10px;">Précédent</button>
         <button @click="nextPage" :disabled="currentPage === maxPage" class="btn btn-secondary" style="margin-left: 100px;">Suivant</button>
       </div>
-    </div></div>
+  </div>
   </template>
   
   <script>
@@ -71,11 +73,7 @@
 
 /*CSS page Film */
 
-body {
-  background-image: linear-gradient(to right, #587797, #587797 10%, transparent 10%, transparent 90%,#587797 90%);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
+
 
 
 .item-movie{
