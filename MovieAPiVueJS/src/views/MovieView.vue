@@ -71,11 +71,18 @@
 
 /*CSS page Film */
 
+body {
+  background-image: linear-gradient(to right, #587797, #587797 10%, transparent 10%, transparent 90%,#587797 90%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
 
 .item-movie{
 
 text-align: center;
 }
+
 .pagination{
 text-align: center;
 }

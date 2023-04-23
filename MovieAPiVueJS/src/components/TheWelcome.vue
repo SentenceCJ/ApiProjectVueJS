@@ -61,7 +61,7 @@ export default {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin-left: 270px;
+  margin-left: 220px;
 }
 
 .film-grid {

@@ -32,6 +32,11 @@ const router = createRouter({
       name: 'SearchResults',
       component: () => import('../views/SearchResults.vue'),
       props: true
+    },
+    {
+      path: '/CinemaPlan',
+      name: 'cinemaplan',
+      component: () => import('../views/CinemaPlan.vue')
     }
 
   ]

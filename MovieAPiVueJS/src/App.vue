@@ -26,7 +26,7 @@ function searchMovie() {
         <RouterLink to="/">Home</RouterLink>
       </li>
       <li class="nav-item">
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/about">Cinema</RouterLink>
       </li>
       <li class="nav-item">
         <RouterLink to="/movie">Movie</RouterLink>
