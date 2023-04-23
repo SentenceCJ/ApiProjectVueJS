@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="margin-left:200px">
     <h2>Search results for "{{ query }}"</h2>
     <ul v-if="movies.length > 0">
       <li v-for="movie in movies" :key="movie.id">
