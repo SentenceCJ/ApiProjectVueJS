@@ -22,11 +22,15 @@
       <button type="submit">Réserver</button>
     </form>
     <div class="summary" v-if="reservationSubmitted">
-      <h2>Récapitulatif de votre commande :</h2>
-      <p>Nom : {{ name }}</p>
-      <p>Rangée : {{ color }}</p>
-      <p>Nombre de places : {{ quantity }}</p>
-      <p>Prix unitaire : {{ getTotalPrice() }} €</p>
+      <h2 style="text-align:center;">Récapitulatif de votre commande :</h2>
+      <br>
+      <p style="text-align:center;">Nom : {{ name }}</p> 
+      <br>
+      <p style="text-align:center;">Rangée : {{ color }}</p>
+      <br>
+      <p style="text-align:center;">Nombre de places : {{ quantity }}</p>
+      <br>
+      <p style="text-align:center;">Prix Total : {{ getTotalPrice() }} €</p>
       <!-- <p>Places disponibles : {{ getAvailablePlaces() }} / 150</p>
       http://mediakwest.com/wp-content/uploads/2016/11/formule_dynamic.png -->
     </div>
@@ -117,5 +121,6 @@ input, select {
   width: 40%; /* utiliser une largeur plus petite pour laisser de l'espace pour le formulaire */
   margin-left: 10%; /* ajouter un espacement entre les deux éléments */
   float: right;
+  
 }
 </style>
