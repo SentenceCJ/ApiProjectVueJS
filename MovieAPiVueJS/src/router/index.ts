@@ -31,7 +31,9 @@ const router = createRouter({
       path: '/search/:query',
       name: 'SearchResults',
       component: () => import('../views/SearchResults.vue'),
-      props: true
+      props: (route) => ({
+        query : route.params.query
+      })
     },
     {
       path: '/CinemaPlan',
