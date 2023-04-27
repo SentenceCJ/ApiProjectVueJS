@@ -1,12 +1,13 @@
 <script setup lang="ts">
+import { ref, watch } from 'vue'
 import { RouterLink, RouterView, useRouter } from 'vue-router'
 import Footer from './components/Footer.vue'
 
 const router = useRouter()
-let searchText = ''
+let searchText = ref('')
 function searchMovie() {
   if (searchText) {
-    router.push(`/search/${searchText}`)
+    router.push(`/search/${searchText.value}`)
   }
 }
 </script>
