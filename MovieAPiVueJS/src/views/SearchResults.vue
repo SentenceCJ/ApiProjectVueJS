@@ -32,9 +32,8 @@ watch(() => props.query, (newValue, oldValue) => {
     movies.value = response.results
    }).catch(error => { 
     console.error(error)
-   }).finally(() => {
-    })
    })
+  },{immediate: true })
 
 
 </script>
