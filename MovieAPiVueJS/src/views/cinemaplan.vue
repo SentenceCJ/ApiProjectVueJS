@@ -4,8 +4,13 @@
   <div class="reservation"  >
     
     <form @submit.prevent="submitForm">
+      <label for="nameMovie">Nom du film :</label>
+      <input type="text" id="nameMovie" v-model="nameMovie" required>
+      <label for="nameMovie">Date :</label>
+      <input type="text" id="date" v-model="date" required>
       <label for="name">Nom :</label>
       <input type="text" id="name" v-model="name" required>
+      
       <label for="color">Rangée :</label>
       <select id="color" v-model="color" required>
         <option value="" disabled selected>Sélectionnez une rangée</option>
@@ -24,6 +29,10 @@
     <div class="summary" v-if="reservationSubmitted">
       <h2 style="text-align:center;">Récapitulatif de votre commande :</h2>
       <br>
+      <p style="text-align:center;">Nom du film : {{ nameMovie }}</p> 
+      <br>
+      <p style="text-align:center;">Date : {{ date }}</p> 
+      <br>
       <p style="text-align:center;">Nom : {{ name }}</p> 
       <br>
       <p style="text-align:center;">Rangée : {{ color }}</p>
@@ -41,6 +50,8 @@ export default {
   data() {
     return {
       name: '',
+      date:'',
+      nameMovie :'',
       color: '',
       quantity: 1,
       price : 1,
