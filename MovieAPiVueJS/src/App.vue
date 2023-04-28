@@ -3,6 +3,7 @@ import { ref, watch } from 'vue'
 import { RouterLink, RouterView, useRouter } from 'vue-router'
 import Footer from './components/Footer.vue'
 
+// Fonction pour rechercher un film
 const router = useRouter()
 let searchText = ref('')
 function searchMovie() {
@@ -50,11 +51,7 @@ function searchMovie() {
 </template>
 
 <style scoped>
-/* body {
-  background-image: linear-gradient(to right, #587797, #587797 10%, transparent 10%, transparent 90%,#587797 90%);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-} */
+
 
 .left-banner {
   position: fixed;
@@ -138,31 +135,3 @@ function searchMovie() {
 </style>
 
 
-<!-- <template>
- 
-  <nav class="navbar">
-    <div class="navbar-brand">
-      <a href="#">
-        <img src="./components/icons/CJmovies.png" alt="Logo" style="width: 100%; height: 80px;"/>
-      </a>
-    </div>
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <RouterLink to="/">Home</RouterLink>
-      </li>
-      <li class="nav-item">
-        <RouterLink to="/about">About</RouterLink>
-      </li>
-      <li class="nav-item">
-        <RouterLink to="/movie">Movie</RouterLink>
-      </li>
-    </ul>
-   
-  </nav>
-
- 
-  <RouterView />
-
-  <footer class="footer">
-  </footer>
-</template> -->

@@ -2,7 +2,7 @@
   <template>
     <div style="margin-left: 130px;margin-bottom:100px">
     <div class="FilmandSeries">
-      <h1 class="title">Movies and Series available</h1>
+      <h1 class="title">Movies available</h1>
       <div class="item-movie" >
         <ul> 
           <li v-for="(item, index) in displayedItems" :key="item.id">

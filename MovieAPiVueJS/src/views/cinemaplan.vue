@@ -31,8 +31,7 @@
       <p style="text-align:center;">Nombre de places : {{ quantity }}</p>
       <br>
       <p style="text-align:center;">Prix Total : {{ getTotalPrice() }} €</p>
-      <!-- <p>Places disponibles : {{ getAvailablePlaces() }} / 150</p>
-      http://mediakwest.com/wp-content/uploads/2016/11/formule_dynamic.png -->
+      
     </div>
   </div>
 </template>
@@ -48,6 +47,7 @@ export default {
       reservationSubmitted: false
     }
   },
+  // méthodes qui permettent de valider le formulaire / Calculer le total des places en fonction des rangés 
   methods: {
     submitForm() {
       this.reservationSubmitted = true;
@@ -68,10 +68,7 @@ export default {
       const price = this.getPrice();
       return price * this.quantity;
     },
-//     getAvailablePlaces() {
-//   const quantity = this.quantity;
-//   return 150 - quantity;
-// }
+
   }
 }
 </script>
@@ -118,8 +115,8 @@ input, select {
   border: 1px solid #ccc;
   padding: 20px;
   border-radius: 5px;
-  width: 40%; /* utiliser une largeur plus petite pour laisser de l'espace pour le formulaire */
-  margin-left: 10%; /* ajouter un espacement entre les deux éléments */
+  width: 40%; 
+  margin-left: 10%; 
   float: right;
   
 }

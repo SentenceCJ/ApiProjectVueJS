@@ -12,9 +12,7 @@
     <br>
     <br>
     <br>
-    <!-- <div class="video-container">
-      <iframe width="600" height="355" :src="'https://www.youtube.com/embed/KqCiVRbwMvQ'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div> -->
+   
     
   </div>
 </template>
